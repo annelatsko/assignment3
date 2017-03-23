@@ -1,7 +1,5 @@
 <?php 
-
-	
-
+	echo $_POST['value'];
 ?>
 
 <!doctype html>
@@ -13,6 +11,11 @@
 	<link rel="stylesheet" href="assignment3.css">
 </head>
 <body>
+	<form method="post" action="">
+		<input type="text" name="value">
+		<input type="submit">
+	</form>
+
 	
 </body>
 </html>
