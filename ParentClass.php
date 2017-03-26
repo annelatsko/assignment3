@@ -3,43 +3,49 @@
 
 	class ParentClass {
 
-		private $n;
-		private $p;
-		private $c;
+		private $n = "";
+		private $p = "";
+		private $c = "";
+		private $ae = "";
 
 
 		public function __construct($n, $p, $c, $ae) {
-      $this->name = $n;
-      $this->power = $p;
-      $this->city = $c;
-      $this->alterEgo = $ae;
+      $this->n = $n;
+      $this->p = $p;
+      $this->c = $c;
+      $this->ae = $ae;
     }
 
-		public function getSuperheroName() {
-      return $this->name;
+		public function getHeroName() {
+      return $this->n;
     }
 
     public function getAlterEgo() {
-    	return $this->alterEgo;
+    	return $this->ae;
     }
 
-    public function getSuperheroPower() {
-    	return $this->power;
+    public function getPower() {
+    	return $this->p;
     }
 
     public function getCity() {
-    	return $this->city;
+    	return $this->c;
+    }
+
+    public function repeatBatmanForLengthOfInputString($str){
+      $str_len = strlen($str);
+      $x = 1; 
+      while($x <= $str_len) {
+          echo "<div> Batman </div>";
+          $x++;
+      } 
     }
 
     public function __toString() {
-      $greeting = "Hello, " . $this->getSuperheroName() . ".";
-      $powerExpose = "How is it going with the whole " . $this.getSuperheroPower() . "thing?"
-      $alter = "I will not say that your alter ego is  " . $this->getAlterEgo() . " for security reasons.";
-      $city = "Good luck protecting " . $this->getCity() . ".";
-      return $greeting . "<br>" . $powerExpose . "<br>" . $alter . "<br>" . $city . "<br>";
+      $greeting = "Hello, " . $this->getHeroName() . ".";
+      $thing = "I see that you're doing your thing.";
+      $neato = "It's neato that you're looking at this parent class that doesn't actually get used.";
+      $city = "I'm feeling reasonably 0/10 about PHP.";
+      return $greeting . "<br>" . $thing . "<br>" . $neato . "<br>" . $city . "<br>";
     }
-
-
-
-		
 	}
